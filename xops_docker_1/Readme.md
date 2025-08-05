@@ -5,7 +5,8 @@
 This project contains a simple, designed HTML page that displays:
  
 ---
- 
+ <img width="1913" height="875" alt="image" src="https://github.com/user-attachments/assets/34e77b70-852e-4c22-a9f6-113d44ee2c66" />
+
 ## Files
  
 - **index.html**  
