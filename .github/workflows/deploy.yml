@@ -23,13 +23,13 @@ jobs:
       # Step 3: Ensure app directory exists on EC2
       - name: Create app directory on EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.EC2_PUBLIC_IP }} "mkdir -p ~/app"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.EC2_PUBLIC_IP }} "mkdir -p ~/app4"
 
       # Step 4: Copy project files to EC2
       - name: Sync project files
         run: |
           rsync -avz --exclude '.git*' -e "ssh -o StrictHostKeyChecking=no" ./Task3/ \
-            ${{ secrets.SSH_USERNAME }}@${{ secrets.EC2_PUBLIC_IP }}:~/app/
+            ${{ secrets.SSH_USERNAME }}@${{ secrets.EC2_PUBLIC_IP }}:~/app4/
 
       # Step 5: Install Node.js, dependencies, and restart app with PM2
       - name: Restart Node.js App on EC2
@@ -47,7 +47,7 @@ jobs:
             fi
 
             # Navigate to app folder
-            cd ~/app
+            cd ~/app4
 
             # Kill old Node.js process if running
             pkill -f server.js || true
