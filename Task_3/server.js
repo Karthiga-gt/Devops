@@ -22,6 +22,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(80, () => {
-  console.log("Server running at http://localhost:80/");
+server.listen(1234, () => {
+  console.log("Server running at http://localhost:1234/");
 });
