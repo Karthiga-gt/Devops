@@ -38,7 +38,7 @@ Terminate EC2 to avoid charges.
 Below are example screenshots placed in the `screenshots/` folder:
  
 ### EC2 WEBPAGE
-<img width="1919" height="1006" alt="Screenshot 2025-08-28 112228" src="https://github.com/user-attachments/assets/a90156cb-3eb8-4800-9745-f999eb39cf1e" />
+<img width="1919" height="1004" alt="Screenshot 2025-08-28 112241" src="https://github.com/user-attachments/assets/d46ba7ee-e0ee-4986-b3df-a6b53beee7e2" />
  
 ### Ansible Run Output
 <img width="1919" height="1006" alt="Screenshot 2025-08-28 112228" src="https://github.com/user-attachments/assets/6eb8a9e0-6927-48e8-ac7e-a41a294ea2f1" />
