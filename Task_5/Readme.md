@@ -5,7 +5,7 @@ Deploy a local Kubernetes cluster with kind and serve a custom NGINX page.
  
 ## Project Structure
 ```
-/kubernetes-xops-task5
+/task_5
 ├── README.md
 ├── index.html
 ├── app.yaml
