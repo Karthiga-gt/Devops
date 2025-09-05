@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 provider "aws" {
   region = "us-east-1"
 }
@@ -57,6 +58,8 @@ output "ec2_public_ip" {
   value = aws_instance.web.public_ip
 }
 =======
+=======
+>>>>>>> 6f3e4ac4716464eedf8a2a2069c996c5ce5a0df9
 provider "aws" {
   region = "us-east-1"
 }
@@ -114,5 +117,8 @@ resource "aws_instance" "web" {
 output "ec2_public_ip" {
   value = aws_instance.web.public_ip
 }
+<<<<<<< HEAD
 >>>>>>> 6f3e4ac (final_commit)
+=======
+>>>>>>> 6f3e4ac4716464eedf8a2a2069c996c5ce5a0df9
  

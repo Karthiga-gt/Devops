@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # -------------------------------
 # ConfigMap with custom HTML
 # -------------------------------
@@ -92,6 +93,8 @@ spec:
     - port: 80
       targetPort: 80
 =======
+=======
+>>>>>>> 6f3e4ac4716464eedf8a2a2069c996c5ce5a0df9
 # -------------------------------
 # ConfigMap with custom HTML
 # -------------------------------
@@ -184,5 +187,8 @@ spec:
   ports:
     - port: 80
       targetPort: 80
+<<<<<<< HEAD
 >>>>>>> 6f3e4ac (final_commit)
+=======
+>>>>>>> 6f3e4ac4716464eedf8a2a2069c996c5ce5a0df9
       nodePort: 31349   # Change if needed or remove to auto-assign
