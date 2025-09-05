@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 [xops_web]
+=======
+[xops_web]
+>>>>>>> 6f3e4ac (final_commit)
 35.175.182.150 ansible_user=ubuntu ansible_private_key_file=/home/karthiga/.ssh/keypair.pem ansible_ssh_common_args='-o StrictHostKeyChecking=no'

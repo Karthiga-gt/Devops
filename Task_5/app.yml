@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -------------------------------
 # ConfigMap with custom HTML
 # -------------------------------
@@ -90,4 +91,98 @@ spec:
   ports:
     - port: 80
       targetPort: 80
+=======
+# -------------------------------
+# ConfigMap with custom HTML
+# -------------------------------
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: xops-web-content
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Hello World – XOps</title>
+      <style>
+        body {
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, #1e3c72, #2a5298);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: #fff;
+        }
+        .hello {
+          padding: 40px 60px;
+          background: rgba(255,255,255,0.1);
+          border: 2px solid rgba(255,255,255,0.3);
+          border-radius: 16px;
+          font-size: 36px;
+          font-weight: bold;
+          text-align: center;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+          backdrop-filter: blur(6px);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="hello">
+        🌍 Hello World!
+      </div>
+    </body>
+    </html>
+
+# -------------------------------
+# Deployment for NGINX
+# -------------------------------
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xops-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xops-web
+  template:
+    metadata:
+      labels:
+        app: xops-web
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: html-volume
+          configMap:
+            name: xops-web-content
+
+# -------------------------------
+# NodePort Service to expose app
+# -------------------------------
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: xops-web
+spec:
+  type: NodePort
+  selector:
+    app: xops-web
+  ports:
+    - port: 80
+      targetPort: 80
+>>>>>>> 6f3e4ac (final_commit)
       nodePort: 31349   # Change if needed or remove to auto-assign
