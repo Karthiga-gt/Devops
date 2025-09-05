@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: xops-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Karthiga-gt/Devops.git
+    targetRevision: main
+    path: Task_6/k8n   # <-- corrected path
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
