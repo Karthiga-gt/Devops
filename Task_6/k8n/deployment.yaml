@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: karthigagt/app:latest   # <-- your Docker Hub image
+          image: karthigagt/app:30c1d4bfb6e887783bb540a4767a0d8ef44a0833
           ports:
             - containerPort: 80
           resources:              # optional but good practice
