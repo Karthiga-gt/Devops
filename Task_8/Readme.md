@@ -29,3 +29,4 @@ Secrets -> are used for sensitive data like database passwords, API keys, or TLS
 ## 📸 Screenshots
 - Pod environment variables showing `APP_MODE=dev`
 - Mounted `/etc/config/APP_MODE` and `FEATURE_X_ENABLED`
+  <img width="1486" height="575" alt="Screenshot 2025-09-30 123052" src="https://github.com/user-attachments/assets/3ae7aacb-cebf-4bd8-95b3-218f80ef3d4d" />
