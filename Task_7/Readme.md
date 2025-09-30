@@ -62,3 +62,5 @@ kubectl exec -it secret-vol-pod -- cat /etc/secrets/username
 kubectl exec -it secret-vol-pod -- cat /etc/secrets/password
 
 ### Screenshots
+<img width="1906" height="948" alt="Screenshot 2025-09-05 163315" src="https://github.com/user-attachments/assets/51cea964-ce4c-4ecc-b991-9d945cc2c6b3" />
+<img width="1919" height="893" alt="Screenshot 2025-09-05 163218" src="https://github.com/user-attachments/assets/681e0ebc-f6f7-43c0-8bd9-2cad25bac7b8" />
